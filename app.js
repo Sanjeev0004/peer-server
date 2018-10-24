@@ -6,7 +6,7 @@ var errorhandler = require('errorhandler');
 var ExpressPeerServer = require('peer').ExpressPeerServer;
 
 var options = {
-  debug: true;
+  debug: true,
   key: 'WebShare'
 };
  
@@ -18,8 +18,8 @@ var port = process.env.PORT || '3000';
 app.set('port', port);
 
 app.use(cors());
-app.use(express.static(path.join(_dirname, 'public')));
-app.use('/peerjs', ExpressPeerServer(sever, options));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/peerjs', ExpressPeerServer(server, options));
 app.use(errorhandler());
 
 process.on('uncaughtException', function(exc) {
