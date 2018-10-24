@@ -5,7 +5,7 @@ var cors = require('cors');
 var errorhandler = require('errorhandler');
 var ExpressPeerServer = require('peer').ExpressPeerServer;
 
-vr options = {
+var options = {
   debug: true;
   key: 'WebShare'
 };
